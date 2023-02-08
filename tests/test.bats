@@ -1,7 +1,7 @@
 setup() {
   set -eu -o pipefail
   export DIR="$( cd "$( dirname "$BATS_TEST_FILENAME" )" >/dev/null 2>&1 && pwd )/.."
-  export TESTDIR=~/tmp/ddev-portainer-test-$(date +%s)
+  export TESTDIR=/tmp/ddev-portainer-test-$(date +%s)
   mkdir -p $TESTDIR
   export PROJNAME=ddev-portainer-test
   export DDEV_NON_INTERACTIVE=true

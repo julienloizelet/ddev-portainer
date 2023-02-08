@@ -12,7 +12,15 @@ The public API for this project is defined by the files `docker-compose.portaine
 
 ------
 
+## [1.0.0](https://github.com/julienloizelet/ddev-portainer/releases/tag/v1.0.0) - 2023-02-08
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-portainer/compare/v0.0.1...v1.0.0)
 
+### Changed
+
+- Change version to `1.0.0`: first stable release
+
+
+---
 
 ## [0.0.1](https://github.com/julienloizelet/ddev-portainer/releases/tag/v0.0.1) - 2023-02-08
 ### Added
