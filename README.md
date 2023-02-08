@@ -26,17 +26,17 @@ This DDEV add-on allows you to use [Portainer Community Edition (CE)](https://do
 
 ## Basic usage
 
-Once ddev has been restarted, you could get the URL of your Portainer GUI by running `ddev describe`.
+Once ddev has been restarted, you should get the URL of your Portainer GUI by running `ddev describe`.
 
-![](/home/julien/workspace/ddev/add-ons/ddev-portainer/images/ddev-describe.jpg)
+![ddev describe](images/ddev-describe.jpg)
 
-Browse to this URL (in this example: ` http://ddev-addon-test.ddev.site:9100`) and create your user:
+Browse to this URL and create your user:
 
-![](/home/julien/workspace/ddev/add-ons/ddev-portainer/images/create-user.jpg)
+![create user](images/create-user.jpg)
 
 
 
-Click the `Getting started` link and you can start using the Portainer GUI.
+Click the `Getting started` link and start using the Portainer GUI.
 
 For more information, please read the [official documentation](https://docs.portainer.io/user/home).
 
