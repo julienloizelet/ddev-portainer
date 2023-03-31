@@ -14,6 +14,9 @@ on:
         description: Debug with tmate
         default: false
 
+permissions:
+  contents: write
+
 defaults:
   run:
     shell: bash
@@ -69,24 +72,23 @@ jobs:
         mv ddev /usr/local/bin/ddev && chmod +x /usr/local/bin/ddev
 
     - name: Download docker images
-      run: | 
-        mkdir junk && pushd junk && ddev config --auto && ddev debug download-images >/dev/null
-        docker pull memcached:1.6 >/dev/null
+      run: mkdir junk && pushd junk && ddev config --auto && ddev debug download-images >/dev/null
+
+    - name: tests
+      run: bats tests
 
     - name: tmate debugging session
       uses: mxschmitt/action-tmate@v3
       with:
         limit-access-to-actor: true
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        timeout-minutes: 60
-      if: github.event.inputs.debug_enabled == 'true'
-
-    - name: tests
-      run: bats tests
+      timeout-minutes: 30
+      if: failure() && github.event.inputs.debug_enabled == 'true'
 
     # keepalive-workflow adds a dummy commit if there's no other action here, keeps
     # GitHub from turning off tests after 60 days
     - uses: gautamkrishnar/keepalive-workflow@v1
       if: matrix.ddev_version == 'stable'
-
-
+      with:
+        commit_message: "chore(*): Automated commit to keep the repository active"
+        time_elapsed: 55
