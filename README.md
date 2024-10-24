@@ -22,7 +22,17 @@ This DDEV add-on allows you to use [Portainer Community Edition (CE)](https://do
 
 ## Installation
 
-`ddev get julienloizelet/ddev-portainer && ddev restart`
+For DDEV v1.23.5 or above run
+
+```sh
+ddev add-on get julienloizelet/ddev-portainer && ddev restart
+```
+
+For earlier versions of DDEV run
+
+```sh
+ddev get julienloizelet/ddev-portainer && ddev restart
+```
 
 ## Basic usage
 
