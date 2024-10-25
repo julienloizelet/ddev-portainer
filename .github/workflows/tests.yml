@@ -15,6 +15,10 @@ on:
         type: boolean
         description: Debug with tmate
         default: false
+  workflow_run:
+    types: [completed]
+    workflows: [Create Release]
+
 
 permissions:
   actions: write
@@ -28,6 +32,9 @@ jobs:
       fail-fast: false
 
     runs-on: ubuntu-latest
+    if: |
+        contains(fromJson('["push","pull_request","workflow_dispatch","schedule"]'), github.event_name) ||
+        (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
 
     steps:
 
