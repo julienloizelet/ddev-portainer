@@ -1,4 +1,4 @@
-[![tests](https://github.com/julienloizelet/ddev-portainer/actions/workflows/tests.yml/badge.svg)](https://github.com/julienloizelet/ddev-portainer/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2023.svg)
+[![tests](https://github.com/julienloizelet/ddev-portainer/actions/workflows/tests.yml/badge.svg)](https://github.com/julienloizelet/ddev-portainer/actions/workflows/tests.yml)
 
 # ddev-portainer
 
@@ -36,11 +36,9 @@ ddev get julienloizelet/ddev-portainer && ddev restart
 
 ## Basic usage
 
-Once ddev has been restarted, you should get the URL of your Portainer GUI by running `ddev describe`.
-
-![ddev describe](images/ddev-describe.jpg)
-
-Browse to this URL and create your user:
+Once ddev has been restarted, you can access the Portainer GUI by running `ddev portainer`.
+ 
+If this is your first access, create your user:
 
 ![create user](images/create-user.jpg)
 
