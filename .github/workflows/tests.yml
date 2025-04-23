@@ -1,4 +1,4 @@
-name: tests
+name: Tests
 on:
   pull_request:
   push:
@@ -47,6 +47,7 @@ jobs:
           addon_ref: ${{ env.GITHUB_REF }}
 
   workflow-keepalive:
+    name: Keepalive workflow
     if: github.event_name == 'schedule'
     uses: ./.github/workflows/keepalive.yml
     permissions:
