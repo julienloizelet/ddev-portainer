@@ -46,3 +46,8 @@ jobs:
           addon_repository: ${{ env.GITHUB_REPOSITORY }}
           addon_ref: ${{ env.GITHUB_REF }}
 
+  workflow-keepalive:
+    if: github.event_name == 'schedule'
+    uses: ./.github/workflows/keepalive.yml
+    permissions:
+      actions: write
