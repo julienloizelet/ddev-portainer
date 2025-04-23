@@ -1,7 +1,7 @@
 [![add-on registry](https://img.shields.io/badge/DDEV-Add--on_Registry-blue)](https://addons.ddev.com)
 [![Tests](https://github.com/julienloizelet/ddev-portainer/actions/workflows/tests.yml/badge.svg)](https://github.com/julienloizelet/ddev-portainer/actions/workflows/tests.yml)
 [![last commit](https://img.shields.io/github/last-commit/julienloizelet/ddev-portainer)](https://github.com/julienloizelet/ddev-portainer/commits)
-[![release](https://img.shields.io/github/v/release/julienloizelet/ddev-portainer)](https://github.com/julienloizelet/ddev-portainer/releases/latest)
+[![release](https://img.shields.io/github/v/release/julienloizelet/ddev-portainer)](https://github.com/julienloizelet/ddev-portainer/releases)
 
 # ddev-portainer
 
