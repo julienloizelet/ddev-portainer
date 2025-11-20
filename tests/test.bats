@@ -1,3 +1,18 @@
+#!/usr/bin/env bats
+
+# Bats is a testing framework for Bash
+# Documentation https://bats-core.readthedocs.io/en/stable/
+# Bats libraries documentation https://github.com/ztombol/bats-docs
+
+# For local tests, install bats-core, bats-assert, bats-file, bats-support
+# And run this in the add-on root directory:
+#   bats ./tests/test.bats
+# To exclude release tests:
+#   bats ./tests/test.bats --filter-tags '!release'
+# For debugging:
+#   bats ./tests/test.bats --show-output-of-passing-tests --verbose-run --print-output-on-failure
+
+
 setup() {
   set -eu -o pipefail
   brew_prefix=$(brew --prefix)
@@ -8,6 +23,7 @@ setup() {
   mkdir -p $TESTDIR
   export PROJNAME=ddev-portainer-test
   export DDEV_NONINTERACTIVE=true
+  export DDEV_NO_INSTRUMENTATION=true
   ddev delete -Oy ${PROJNAME} >/dev/null 2>&1 || true
   cd "${TESTDIR}"
   ddev config --project-type=php --project-name=${PROJNAME}

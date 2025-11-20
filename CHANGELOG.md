@@ -12,6 +12,20 @@ The public API for this project is defined by the files `docker-compose.portaine
 
 ------
 
+## [1.2.0](https://github.com/julienloizelet/ddev-portainer/releases/tag/v1.2.0) - 2025-11-20
+[_Compare with previous release_](https://github.com/julienloizelet/ddev-portainer/compare/v1.1.0...v1.2.0)
+
+### Changed
+
+- Set `1.24.10` as the minimum required DDEV version
+
+### Fixed
+
+- Use `ddev_version_constraint` instead of deprecated `ddev debug capabilities` test
+
+
+---
+
 ## [1.1.0](https://github.com/julienloizelet/ddev-portainer/releases/tag/v1.1.0) - 2024-10-25
 [_Compare with previous release_](https://github.com/julienloizelet/ddev-portainer/compare/v1.0.0...v1.1.0)
 
